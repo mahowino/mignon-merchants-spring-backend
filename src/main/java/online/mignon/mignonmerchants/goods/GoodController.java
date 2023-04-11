@@ -24,4 +24,14 @@ public class GoodController {
     }
 
 
+    @GetMapping(path = "/{goodId}")
+    public ResponseEntity<Goods> getGoods(@PathVariable("goodId") Long id){
+        return ResponseEntity.ok(service.getGood(id));
+    }
+    @PostMapping("/add")
+    public void getGoods(@RequestBody Goods good){
+        service.addGoods(good);
+    }
+
+
 }

@@ -25,7 +25,7 @@ public class GoodService  {
         return goodsDao.getGoodById(goodId).orElseThrow(()-> new IDNotFoundException("good not found"));
     }
 
-    public  void addGoods(Goods good){
+    public void addGoods(Goods good){
         goodsDao.save(good);
     }
 

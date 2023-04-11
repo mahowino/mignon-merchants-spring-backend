@@ -43,7 +43,6 @@ public class AuthenticationService {
         return AuthenticationResponse
                 .builder()
                 .token(jwtToken)
-                .credits(0.00)
                 .email(request.getEmail())
                 .build();
 
